@@ -1,0 +1,350 @@
+.sign-left-side {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    border-radius: 50px 0 0 50px;
+}
+
+.sign-left-content {
+    width: 89%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.sign-left-content h1 {
+    color: #049CB0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.sign-right-side {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 50px 50px 0px;
+    background-color: #049CB0;
+    height: 100%;
+}
+
+.right-content {
+    width: 89%;
+    margin: 1em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-right-side h1 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 3em;
+}
+
+.sign-right-side p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: -0.5em auto;
+    text-align: center;
+}
+
+.students {
+    height: 55px;
+    width: 40%;
+    font-weight: 700;
+}
+
+@media (max-width: 1500px) {
+    .students {
+        width: 70%;
+    }
+}
+
+.progressbar {
+    position: relative;
+    display: flex;
+    margin-top: 1.5em;
+    justify-content: space-between;
+    counter-reset: step;
+    color: #049CB0;
+    font-weight: 800;
+}
+
+.progressbar::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: rgba(173, 169, 169, 0.63);
+}
+
+.progress {
+    position: absolute;
+    background-color: #049CB0;
+    width: 0%;
+}
+
+.progress-step {
+    width: 3.1875rem;
+    z-index: 1;
+    height: 3.1875rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 4px 4px 14px -6px rgba(15, 15, 15, 0.445);
+    align-items: center;
+}
+
+.progress-step::before {
+    content: attr(data-title);
+    position: absolute;
+    color: #049CB0;
+    bottom: calc(100% - 0rem);
+    font-size: 0.86rem;
+}
+
+.progress-step::after {
+    counter-increment: step;
+    content: counter(step);
+}
+
+.progress-step-active {
+    background-color: #049CB0;
+    color: #fff;
+}
+
+.field-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-step {
+    display: none;
+    animation: animate 0.5s;
+    transform-origin: top;
+}
+
+.active {
+    display: block;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(1.0);
+        opacity: 0
+    }
+    to {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+.input {
+    width: 40%;
+    margin: 1em auto;
+    color: #049CB0;
+    font-size: 1.2rem;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    padding: 0 1em;
+    background-color: #F5F5F5;
+    box-shadow: 4px 4px 9px -5px #fff inset, 4px 4px 14px -6px rgba(15, 15, 15, 0.445);
+}
+.error{
+    border: 3px solid rgb(231, 65, 65);
+}
+
+.input::placeholder {
+    color: #049CB0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.head {
+    color: #049CB0;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    text-align: left;
+    margin-top: 2em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.next-btn {
+    width: 45%;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    display: block;
+    margin: 1em auto;
+    font-weight: 600;
+    border: none;
+    color: #fff;
+    background-color: #049CB0;
+    box-shadow: 4px 4px 9px -5px #fff inset, 4px 4px 14px -6px rgb(15, 15, 15);
+}
+
+.contact {
+    flex-direction: column;
+}
+
+.contact-input {
+    margin: 1em 1em;
+}
+
+.next-btn:hover {
+    cursor: pointer;
+    background-color: #06b2c9;
+}
+@media (max-width: 1340px) {
+    .input {
+        width: 35%;
+        font-size: 1rem;
+        margin: 0.6em auto;
+    }
+    .input::placeholder{
+        font-size: 1rem
+    }
+    .progress-step::before {
+        font-size: 0.70rem;
+        font-weight: 800;
+    }
+    .contact-input {
+        width: 70%;
+    }
+}
+@media (max-width: 1000px) {
+    .sign-right-side h1 {
+        margin-top: 4em;
+        font-size: 2rem;
+    }
+    .sign-right-side p {
+        font-size: 1.1rem;
+    }
+    .students {
+        width: 80%;
+    }
+    .sign-left-content h1 {
+        margin-top: 1.5em;
+        font-size: 2.2rem;
+    }
+    .progressbar{
+        margin-top:1em
+    }
+    .progress-step {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .progress-step::before {
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+    .input {
+        width: 35%;
+        font-size: 0.8rem;
+        margin: 1em auto;
+    }
+    .contact-input {
+        width: 70%;
+    }
+    .input::placeholder {
+        font-size: 1rem;
+    }
+    .head {
+        font-size: 1.4rem;
+        margin-top: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .sign-right-side h1 {
+        margin-top: 3.5em;
+        font-size: 1.8rem;
+    }
+    .sign-right-side p {
+        font-size: 1rem;
+    }
+    .students {
+        width: 90%;
+        font-size: 0.9rem
+    }
+    .sign-left-content h1 {
+        margin-top: 1.9em;
+        font-size: 2rem;
+    }
+    .progressbar {
+        margin-top: 0em;
+    }
+    .progress-step {
+        width: 2rem;
+        height: 2rem;
+    }
+    .progress-step::before {
+        display: none;
+    }
+    .input {
+        width: 80%;
+        margin: 0.4em auto;
+    }
+    .head {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sign-left-side {
+        border-radius: 50px 50px 0 0px;
+    }
+    .sign-right-side {
+        border-radius: 0px 0 50px 50px;
+    }
+    .sign-right-side h1 {
+        margin-top: 0.5em;
+        font-size: 1.8rem;
+    }
+    .sign-right-side p {
+        font-size: 1rem;
+    }
+    .students {
+        width: 90%;
+        font-size: 0.9rem;
+        margin-bottom: 4em;
+    }
+    .sign-left-content h1 {
+        margin-top: 1em;
+        font-size: 2rem;
+    }
+    .progressbar {
+        margin-top: 0em;
+    }
+    .progress-step {
+        width: 2rem;
+        height: 2rem;
+    }
+    .progress-step::before {
+        display: none;
+    }
+    .input {
+        width: 80%;
+        margin: 0.4em auto;
+    }
+    .head {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 1.5em;
+    }
+}

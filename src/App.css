@@ -1,38 +1,235 @@
-.App {
-  text-align: center;
+* {
+    outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+    background-color: #7EFFFF1C;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-container {
+    width: 65vw;
+    height: 550px;
+    box-shadow: 15px 20px 20px 7px rgba(128, 128, 128, 0.322);
+    /* background-color:red; */
+    border-radius: 50px;
+    display: flex;
+    align-self: center;
 }
 
-.App-link {
-  color: #61dafb;
+.left-side {
+    background-color: #049CB0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 0 0 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right-side {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    border-radius: 0px 50px 50px 0px;
+    height: 100%;
+}
+
+.left-side .left-content {
+    width: 89%;
+    margin: 7em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side .right-content {
+    width: 89%;
+    margin: 3em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side h1 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.right-side h1 {
+    color: #049CB0;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.left-side p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: -0.5em auto;
+    text-align: center;
+}
+
+.signup-btn {
+    width: 60%;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    display: block;
+    margin: 3em auto;
+    font-weight: 100;
+    border: none;
+    color: #fff;
+    background-color: #049CB0;
+    box-shadow: 4px 4px 9px -5px #fff inset, 4px 4px 14px -6px rgb(15, 15, 15);
+}
+
+.signup-btn:hover {
+    cursor: pointer;
+    background-color: #07a0b4
+}
+
+.login {
+    width: 55%;
+    height: 40px;
+    margin: 3em auto 0 auto;
+}
+
+.right-content .input {
+    width: 55%;
+    margin: auto;
+    height: 40px;
+    color: #049CB0;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: none;
+    padding-left: 1em;
+    background-color: #F5F5F5;
+    box-shadow: 4px 4px 9px -5px #fff inset, 4px 4px 14px -6px rgba(15, 15, 15, 0.445);
+}
+
+#pass {
+    margin-top: 1em;
+    margin-bottom: -1em;
+}
+
+.right-content p {
+    color: #049CB0;
+    text-align: center;
+    margin-top: 0.6em;
+}
+
+.right-content h3 {
+    color: #049CB0;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    border-radius: 50px;
+    width: 50px;
+}
+
+.icon-link {
+    margin-left: 12px;
+}
+
+@media (max-width: 1000px) {
+    .form-container {
+        width: 75vw;
+    }
+    .right-side h1 {
+        font-size: 2.3rem;
+    }
+    .left-side h1 {
+        font-size: 2.2rem;
+    }
+    .right-content .input {
+        font-size: 1rem;
+    }
+    
+    .login {
+        width: 60%;
+        margin: 2em auto 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 80vw;
+    }
+    .right-side h1 {
+        font-size: 2rem;
+    }
+    .left-side h1 {
+        font-size: 2rem;
+    }
+    .left-side p {
+        font-size: 1rem;
+        text-align: justify;
+        margin: -0.5em auto;
+        text-align: center;
+    }
+    .signup-btn {
+        margin: 2em auto;
+    }
+    .right-content p {
+        margin-top: -1.3em;
+    }
+    .right-content h3 {
+        margin-top: -0.2em;
+    }
+    .right-content .input {
+        width: 80%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        align-self: unset;
+        border-radius: 50px;
+        flex-direction: column;
+        margin-top: 3em;
+    }
+    .left-side {
+        border-radius: 50px 50px 0px 0;
+    }
+    .right-side {
+        border-radius: 0 0 50px 50px
+    }
+    .left-side .left-content {
+        margin: 3.5em auto 1em auto;
+    }
+    .right-side .right-content {
+        margin: 0em auto 1em auto;
+    }
+    .right-side h1 {
+        font-size: 1.6rem;
+    }
+    .left-side h1 {
+        font-size: 1.6rem;
+    }
+    .left-side p {
+        font-size: 0.89rem;
+    }
+    .signup-btn {
+        width: 80%;
+        height: 30px;
+        font-size: 0.97em;
+    }
 }
